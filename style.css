@@ -1,7 +1,7 @@
-:root{
-    --beige:rgb(146, 125, 89);
-    --beige-menu:#adaaaa;
-    --grigio:#383838;
+:root {
+    --beige: rgb(146, 125, 89);
+    --beige-menu: #cacaca;
+    --grigio: #383838;
 }
 
 *[class*="regular"] {
@@ -38,7 +38,7 @@
 
 @media (min-width:1200px) {}
 
-@media (min-width:1400px) {
+@media (min-width:1700px) {
     html {
         cursor: default;
         user-select: none;
@@ -98,34 +98,38 @@
         height: 2.8em;
     }
 
+    .navbar-item {
+        opacity: 0.5;
+        transition: opacity 0.5s;
+    }
 
     .navbar-item:hover {
         text-decoration: none;
         color: black;
         opacity: 0.9;
-
+        transition: opacity 0.5s;
     }
+
+    /*Pallino*/
 
     .navbar-item::after {
         content: "";
-        position:absolute;
-        top:1.5em;
+        position: absolute;
+        top: 1.5em;
         display: inline-block;
-        right:50%;        
+        right: 50%;
         height: 8px;
         width: 8px;
         background-color: var(--beige);
         border-radius: 100%;
         position: relative;
-        opacity:0;
+        opacity: 0;
+        transition: opacity 0.5s;
     }
 
-    .navbar-item:hover::after{
-        opacity:0.8;
-        transition:opacity 0.2s;
+    .navbar-item:hover::after {
+        opacity: 0.8;
     }
-
-    
 
     /*ICONA DEL MENU*/
 
@@ -133,7 +137,7 @@
         position: relative;
         z-index: 4;
         color: var(--beige);
-        top:0.5vh;
+        top: 0.5vh;
         margin-bottom: 1em;
         font-size: 50px;
     }
@@ -189,7 +193,7 @@
         justify-content: space-evenly;
     }
 
-    .menu-item{
+    .menu-item {
         padding-bottom: 1.5em;
     }
 
@@ -307,17 +311,58 @@
         text-align: center;
         position: relative;
         top: 1em;
+        cursor: pointer;
     }
 
     .linea-scorrimento {
+        position: relative;
+        -webkit-appearance: none;
+        appearance: none;
+        margin-top: 0;
         background: rgb(149, 149, 149);
         background: linear-gradient(90deg, rgba(149, 149, 149, 1) 0%, rgba(212, 189, 149, 1) 100%);
-        position: relative;
+        outline: none;
+        /* Remove outline */
         height: 0.8vh;
         width: 12em;
         border-radius: 5em;
-        top: 43%;
+        top: 30%;
+        overflow: hidden;
     }
 
+    .linea-scorrimento:hover {
+        opacity: 1;
+    }
 
+    .linea-scorrimento::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 15px;
+        height: 15px;
+        background-color: rgba(26, 26, 26, 0.493);
+        opacity: 1;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+
+    .linea-scorrimento::-moz-range-thumb {
+        -moz-appearance: none;
+        appearance: none;
+        width: 15px;
+        height: 15px;
+        background: rgb(148, 148, 148);
+        opacity: 1;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+
+    .linea-scorrimento::-moz-focus-outer {
+        border: 0;
+    }
+
+    .counter {
+        position: absolute;
+        top: 1em;
+        left: 50%;
+    }
 }
