@@ -1,6 +1,7 @@
 
 
 
+
 $(document).ready(function () {
         const swiper = new Swiper('.swiper', {
                 // Optional parameters
@@ -19,7 +20,7 @@ $(document).ready(function () {
                   nextEl: '.swiper-button-next',
                   prevEl: '.swiper-button-prev',
                 },
-
+        
                 
                 autoplay:{
                         delay:2500,

@@ -201,6 +201,9 @@ h3[class*="tagline"] {
     flex-grow: 0.6;
     bottom: 2vh;
 }
+.social-i:hover{
+    opacity:0.8;
+}
 
 .menu-text {
     font-size: 1.5em;
