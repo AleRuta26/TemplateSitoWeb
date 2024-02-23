@@ -92,11 +92,51 @@ h3[class*="tagline"] {
 }
 
 .navbar-item:hover {
-    text-decoration: none;
-    color: black;
     opacity: 0.9;
     transition: opacity 0.5s;
 }
+
+.item-active {
+    opacity: 1;
+}
+
+
+/*Pallino*/
+
+.navbar-item::after {
+    content: "";
+    position: absolute;
+    top: 1.5em;
+    display: inline-block;
+    right: 50%;
+    height: 8px;
+    width: 8px;
+    background-color: var(--beige);
+    border-radius: 100%;
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.navbar-item:hover::after {
+    opacity: 0.8;
+}
+
+.item-active::after {
+    content: "";
+    position: absolute;
+    top: 1.5em;
+    display: inline-block;
+    right: 50%;
+    height: 8px;
+    width: 8px;
+    background-color: var(--beige);
+    border-radius: 100%;
+    position: relative;
+    opacity: 1;
+}
+
+
 
 
 /*ICONA DEL MENU*/
@@ -107,6 +147,7 @@ h3[class*="tagline"] {
     color: var(--beige);
     top: 0.5vh;
     margin-bottom: 1em;
+    right:0;
     font-size: 50px;
 }
 
@@ -182,7 +223,7 @@ h3[class*="tagline"] {
 }
 
 .main-title-bold {
-    font-size: 6em;
+    font-size: 6vw;
     margin-top: 0.5em;
     line-height: 1em;
 }
@@ -190,7 +231,6 @@ h3[class*="tagline"] {
 .main-description-regular {
     left: 0.3em;
     position: relative;
-    padding-right: 20em;
     line-height: 2em;
 }
 
@@ -207,188 +247,23 @@ h3[class*="tagline"] {
     background-color: var(--beige);
 }
 
+/* Rettangoli carosello immagini */
 
-.rectangles {
-    /* border: solid 1px black; */
+.swiper {
     position: absolute;
-    top: 12em;
-    margin-left: 55em;
-    height: 70vh;
-    width: 50vw;
-    right: 7em;
-    background-color: transparent;
-}
-
-#rc1 {
-    border: 1px solid var(--grigio);
-    background-color: var(--grigio);
-    position: absolute;
-    top: 0;
+    top: 20vh;
+    right:5vw;
     height: 60vh;
     width: 43vw;
     z-index: 2;
-}
-
-#rc2 {
-    border: 1px solid var(--beige);
-    background-color: var(--beige);
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    height: 50vh;
-    width: 27vw;
-
-}
-
-.scorrimento {
-    position: absolute;
-    bottom: 1.5em;
-    height: 5vh;
-    width: 13.5vw;
-    left: 5em;
-    z-index: 0;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    gap: 1em;
-}
-
-.scorrimento-medium {
-    color: #383838;
-    position: relative;
-    bottom: 0.5em;
-    top: 0.5em;
-
-}
-
-#chevron {
-    text-align: center;
-    position: relative;
-    top: 1em;
-    cursor: pointer;
-}
-
-.linea-scorrimento {
-    position: relative;
-    -webkit-appearance: none;
-    appearance: none;
-    margin-top: 0;
-    background: rgb(149, 149, 149);
-    background: linear-gradient(90deg, rgba(149, 149, 149, 1) 0%, rgba(212, 189, 149, 1) 100%);
-    outline: none;
-    /* Remove outline */
-    height: 0.8vh;
-    width: 12em;
-    border-radius: 5em;
-    top: 30%;
-    overflow: hidden;
-}
-
-.linea-scorrimento:hover {
-    opacity: 1;
-}
-
-.linea-scorrimento::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 15px;
-    height: 15px;
-    background-color: rgba(26, 26, 26, 0.493);
-    opacity: 1;
-    border-radius: 100%;
-    cursor: pointer;
-}
-
-.linea-scorrimento::-moz-range-thumb {
-    -moz-appearance: none;
-    appearance: none;
-    width: 15px;
-    height: 15px;
-    background: rgb(148, 148, 148);
-    opacity: 1;
-    border-radius: 100%;
-    cursor: pointer;
-}
-
-.linea-scorrimento::-moz-focus-outer {
-    border: 0;
-}
-
-.counter {
-    position: absolute;
-    top: 1em;
-    left: 50%;
-}
-
-
-
-
-
-
-
-@media (min-width:0px) {}
-
-@media (min-width:576px) {}
-
-@media (min-width:768px) {}
-
-@media (min-width:992px) {}
-
-@media (min-width:1200px) {
-
-
-    .menu-text {
-        margin:0;
-    }
-    .main-title-bold {
-        font-size: 4em;
-    }
-
-    .main-description-regular {
-        padding-right: 7em;
-    }
-
+    --swiper-pagination-color: var(--beige);
     
-
-    .rectangles {
-        margin-left: 40em;
-        height: 65vh;
-        right: 3em;
-    }
-
-    .scorrimento {
-        position: relative;
-        bottom: -34em;
-        height: 5vh;
-        right:50%;
-        z-index: 0;
-    }
-    .counter {
-        left: 70%;
-    }
-
-
 }
 
-@media (min-width:1700px) {
-    /*Pallino*/
+.swiper-button-next{
+    color:var(--beige);
+}
 
-    .navbar-item::after {
-        content: "";
-        position: absolute;
-        top: 1.5em;
-        display: inline-block;
-        right: 50%;
-        height: 8px;
-        width: 8px;
-        background-color: var(--beige);
-        border-radius: 100%;
-        position: relative;
-        opacity: 0;
-        transition: opacity 0.5s;
-    }
-
-    .navbar-item:hover::after {
-        opacity: 0.8;
-    }
+.swiper-button-prev{
+    color:var(--beige);
 }
