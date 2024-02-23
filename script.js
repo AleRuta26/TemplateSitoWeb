@@ -27,6 +27,7 @@ $(document).ready(function () {
                         $(this).text(pos);
                 }).fadeIn(100);
         });
+        
         $(".bi-chevron-left").on('click', function () {
                 pos--;
                 pos = controllaPos(pos);
