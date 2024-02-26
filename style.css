@@ -81,7 +81,7 @@ h3[class*="tagline"] {
 }
 
 .navbar-text {
-    font-size: 0.9vw;
+    font-size: 1.2vw;
     display: flex;
     list-style-type: none;
     margin: 0;
@@ -115,8 +115,8 @@ h3[class*="tagline"] {
     top: 1.5em;
     display: inline-block;
     right: 50%;
-    height: 8px;
-    width: 8px;
+    height: 2vh;
+    width: 2vh;
     background-color: var(--beige);
     border-radius: 100%;
     position: relative;
@@ -167,6 +167,10 @@ h3[class*="tagline"] {
 .menu {
     overflow: hidden;
     position: fixed;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    gap:50vh;
     top: 0vh;
     bottom: 0vh;
     width: 30vw;
@@ -182,9 +186,20 @@ h3[class*="tagline"] {
     right: 0vw;
 }
 
+.menu-text {
+    font-size: 1.5em;
+    display: flex;
+    list-style-type: none;
+    margin: 2em;
+    margin-top: 10vh;
+    padding: 1em;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap:20px;
+}
+
 .menu-item {
     font-size: 1.5vw;
-    padding-bottom: 1.2em;
     opacity: 1;
     transition: opacity 0.5s;
 }
@@ -196,34 +211,27 @@ h3[class*="tagline"] {
 .socials {
     font-size: 1.5vw;
     text-align: center;
-    position: relative;
-    top: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.testo-socials {
+    gap:10px;
 }
 
 .icone-socials {
     position: relative;
-    top: 1em;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    flex-grow: 0.6;
-    bottom: 2vh;
+    gap:10px;
 }
 
 .social-i:hover {
     opacity: 0.8;
 }
 
-.menu-text {
-    font-size: 1.5em;
-    display: flex;
-    list-style-type: none;
-    margin: 2em;
-    margin-top: 10vh;
-    padding: 1em;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
+
 
 /*Main Content*/
 
@@ -234,6 +242,7 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin-bottom:5vh;
 }
 
 .main-text {
@@ -252,7 +261,6 @@ main {
 }
 
 .main-description-regular {
-    left: 0.3em;
     position: relative;
     line-height: 2em;
     font-size:1vw;
@@ -260,16 +268,21 @@ main {
 
 .readmore-medium {
     position: relative;
-    font-size: 1vw;
-    letter-spacing: 0.2vw;
-    left: 0.3vw;
-    text-align:center;
-    border: 1px solid var(--beige);
-    padding: 1vw;
-    padding-left: 2.5vw;
-    padding-right: 2.5vw;
-    color: white;
+    height:5vh;
+    width:25vh;
+    margin:2px;
+    border-radius:5px;
     background-color: var(--beige);
+}
+
+#readmore-text{
+    position:relative;
+    text-align:center;
+    font-size: 1.5vw;
+    letter-spacing: 0.2vw;
+    top:0.25vw;
+    margin:0;
+    color: white;
 }
 
 .swiper {
@@ -299,6 +312,11 @@ main {
 }
 
 @media (orientation: portrait) {
+
+    html{
+        margin-bottom:10vh;
+    }
+
     h3[class*="tagline"] {
         font-size:5vw;
     }
@@ -362,6 +380,7 @@ main {
     .menu-text {
         margin: 0.2em;
         margin-top: 7vh;
+        height:0;
     }
 
     /*Main Content*/
@@ -370,15 +389,16 @@ main {
         flex-direction: column;
         flex-wrap: nowrap;
         justify-content: space-between;
-        gap:2%;
+        gap: 10vh;
     }
 
     .main-text {
         position: relative;
         left:6vw;
+        height:auto;
         width: 75vw;
-        height: 60vh;
         top: 0.5vh;
+        gap:30%;
     }
 
     .main-title-bold {
@@ -390,16 +410,20 @@ main {
         font-size: 4vw;
     }
 
-    .readmore-medium {
-        font-size: 6vw;
+    #readmore-text{
+        position:relative;
+        text-align:center;
+        font-size: 3vh;
+        letter-spacing: 0.2vw;
+        top:1.5vh;
+        margin:0;
+        top:10%;
+        color: white;
     }
 
     .swiper {
-        top:5vh;
-        bottom:3vh;
         left:2vh;
         width:90%;
         height:fit-content;
-        margin-bottom:10vh;
     }
 }
