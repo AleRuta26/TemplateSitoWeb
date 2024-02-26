@@ -34,9 +34,6 @@ html {
     height: 100%;
 }
 
-.html-menu {
-    overflow-y: hidden;
-}
 
 a {
     text-decoration: none;
@@ -270,7 +267,7 @@ main {
     height:3vw;
     width:13vw;
     margin:2px;
-    border-radius:5px;
+    border-radius:10px;
     background-color: var(--beige);
 }
 
