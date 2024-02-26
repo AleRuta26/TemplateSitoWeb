@@ -48,7 +48,7 @@ p {
 
 h3[class*="tagline"] {
     padding-left: 0.2em;
-    font-size:1.3vw;
+    font-size: 1.3vw;
 }
 
 #names {
@@ -164,10 +164,10 @@ h3[class*="tagline"] {
 .menu {
     overflow: hidden;
     position: fixed;
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
-    gap:50vh;
+    gap: 50vh;
     top: 0vh;
     bottom: 0vh;
     width: 30vw;
@@ -183,7 +183,7 @@ h3[class*="tagline"] {
     right: 0vw;
 }
 
-.menu-text {
+.menu-text-landscape {
     font-size: 1.5em;
     display: flex;
     list-style-type: none;
@@ -192,7 +192,7 @@ h3[class*="tagline"] {
     padding: 1em;
     flex-direction: column;
     justify-content: space-evenly;
-    gap:20px;
+    gap: 20px;
 }
 
 .menu-item {
@@ -213,7 +213,7 @@ h3[class*="tagline"] {
 }
 
 .testo-socials {
-    gap:10px;
+    gap: 10px;
 }
 
 .icone-socials {
@@ -221,11 +221,15 @@ h3[class*="tagline"] {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    gap:10px;
+    gap: 10px;
 }
 
 .social-i:hover {
     opacity: 0.8;
+}
+
+.menu-text-portrait {
+    display: none;
 }
 
 
@@ -233,52 +237,52 @@ h3[class*="tagline"] {
 /*Main Content*/
 
 main {
-    position:relative;
-    top:2.5vw;
+    position: relative;
+    top: 2.5vw;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-bottom:5vh;
+    margin-bottom: 5vh;
 }
 
 .main-text {
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
     left: 1vw;
     width: 35vw;
     height: 50vh;
-    gap:10%;
+    gap: 10%;
 }
 
 .main-title-bold {
     font-size: 6vw;
     line-height: 1em;
-    margin:0;
+    margin: 0;
 }
 
 .main-description-regular {
     position: relative;
     line-height: 2em;
-    font-size:1vw;
+    font-size: 1vw;
 }
 
 .readmore-medium {
     position: relative;
-    height:3vw;
-    width:13vw;
-    margin:2px;
-    border-radius:10px;
+    height: 3vw;
+    width: 13vw;
+    margin: 2px;
+    border-radius: 10px;
     background-color: var(--beige);
 }
 
-#readmore-text{
-    position:relative;
-    text-align:center;
+#readmore-text {
+    position: relative;
+    text-align: center;
     font-size: 1.3vw;
     letter-spacing: 0.2vw;
-    top:0.25vw;
-    margin:0;
+    top: 0.25vw;
+    margin: 0;
     color: white;
 }
 
@@ -290,7 +294,7 @@ main {
     z-index: 2;
     --swiper-pagination-color: var(--beige);
     --swiper-navigation-sides-offset: 1vw;
-    --swiper-navigation-size:2vw;
+    --swiper-navigation-size: 2vw;
 
 }
 
@@ -310,13 +314,13 @@ main {
 
 @media (orientation: portrait) {
 
-    html{
+    html {
         height: 0;
-        margin-bottom:10vh;
+        margin-bottom: 10vh;
     }
 
     h3[class*="tagline"] {
-        font-size:5vw;
+        font-size: 5vw;
     }
 
     .name-bold {
@@ -324,25 +328,26 @@ main {
     }
 
     /*TOPBAR CON NAVBAR*/
-    .topbar{
-        margin-top:4vh;
+    .topbar {
+        margin-top: 4vh;
     }
+
     .navbar-text {
         font-size: 0.9vw;
-        display:none;
+        display: none;
     }
 
     .navbar-item {
-        font-size:5vw;
+        font-size: 5vw;
     }
 
-    
+
 
     /*ICONA DEL MENU*/
-    
+
 
     #menu-icon {
-        font-size:13vw;
+        font-size: 13vw;
         position: relative;
         top: 0.2vh;
     }
@@ -352,6 +357,7 @@ main {
     .menu {
         width: 50vw;
         right: -52vw;
+        gap:0;
     }
 
     .menu-disappear {
@@ -360,12 +366,29 @@ main {
 
     .menu-item {
         padding-bottom: 1.5vh;
-        font-size:3vh;
+        font-size: 2.5vh;
+        list-style-type: none;
+    }
+
+    .menu-text-landscape {
+        display: none;
+    }
+
+    .menu-text-portrait {
+        font-size: 1.5em;
+        display: flex;
+        flex-wrap: nowrap;
+        list-style-type: none;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+        height: auto;
     }
 
     .socials {
         font-size: 3vh;
-        top:40vh;
+        top: 40vh;
+        gap: 40%;
     }
 
     .icone-socials {
@@ -376,11 +399,7 @@ main {
         padding-bottom: 0vh;
     }
 
-    .menu-text {
-        margin: 0.2em;
-        margin-top: 7vh;
-        height:0;
-    }
+
 
     /*Main Content*/
     main {
@@ -393,11 +412,11 @@ main {
 
     .main-text {
         position: relative;
-        left:6vw;
-        height:auto;
+        left: 6vw;
+        height: auto;
         width: 75vw;
         top: 0.5vh;
-        gap:30%;
+        gap: 30%;
     }
 
     .main-title-bold {
@@ -411,28 +430,28 @@ main {
 
     .readmore-medium {
         position: relative;
-        height:4vh;
-        width:16vh;
-        margin:2px;
-        border-radius:5px;
+        height: 4vh;
+        width: 16vh;
+        margin: 2px;
+        border-radius: 5px;
         background-color: var(--beige);
     }
 
-    #readmore-text{
-        position:relative;
-        text-align:center;
+    #readmore-text {
+        position: relative;
+        text-align: center;
         font-size: 2vh;
         letter-spacing: 0.2vw;
-        top:1.5vh;
-        margin:0;
-        top:25%;
+        top: 1.5vh;
+        margin: 0;
+        top: 25%;
         color: white;
     }
 
     .swiper {
-        left:2vh;
-        width:90%;
-        height:fit-content;
+        left: 2vh;
+        width: 90%;
+        height: fit-content;
     }
 }
 
