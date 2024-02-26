@@ -179,10 +179,12 @@ h3[class*="tagline"] {
 
 .menu-item {
     padding-bottom: 1.5em;
+    opacity:1;
+    transition: opacity 0.5s;
 }
 
 .menu-item:hover {
-    color: rgb(78, 78, 78);
+    opacity:0.8;
 }
 
 .socials {
@@ -220,7 +222,7 @@ h3[class*="tagline"] {
 .main-text {
     position: relative;
     top: 3em;
-    left: 7em;
+    left: 7vw;
     width: 35vw;
     height: 50vh;
 }
