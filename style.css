@@ -31,7 +31,6 @@
 html {
     cursor: default;
     user-select: none;
-    overflow-x: hidden;
     height: 100%;
 }
 
@@ -293,6 +292,7 @@ main {
     z-index: 2;
     --swiper-pagination-color: var(--beige);
     --swiper-navigation-sides-offset: 1vw;
+    --swiper-navigation-size:2vw;
 
 }
 
