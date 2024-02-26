@@ -241,13 +241,14 @@ h3[class*="tagline"] {
 
 .readmore-medium {
     position: relative;
-    letter-spacing: 0.2em;
-    left: 0.3em;
-    top: 3em;
+    font-size: 1vw;
+    letter-spacing: 0.2vw;
+    left: 0.3vw;
+    top: 3vw;
     border: 1px solid var(--beige);
-    padding: 1em;
-    padding-left: 2.5em;
-    padding-right: 2.5em;
+    padding: 1vw;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
     color: white;
     background-color: var(--beige);
 }
@@ -271,4 +272,21 @@ h3[class*="tagline"] {
 
 .swiper-button-prev{
     color:var(--beige);
+}
+
+/* Cellulari */
+@media (min-width: 0) {
+    html{
+        background-color: white;
+    }
+}
+
+/* Computers */
+@media (min-width: 576px) and (max-width: 768px){
+    html{
+        background-color: white;
+    }
+    #names {
+        flex-grow: 0.2;
+    }
 }
