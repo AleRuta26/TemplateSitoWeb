@@ -33,7 +33,10 @@ html {
     user-select: none;
     overflow-x: hidden;
     height: 100%;
-    max-width: 1920px;
+}
+
+.html-menu {
+    overflow-y: hidden;
 }
 
 a {
@@ -56,8 +59,10 @@ h3[class*="tagline"] {
 }
 
 .name-bold {
-    font-size: 2.4em;
+    font-size: 3vw;
 }
+
+/*TOPBAR CON NAVBAR*/
 
 .topbar {
     position: relative;
@@ -76,6 +81,7 @@ h3[class*="tagline"] {
 }
 
 .navbar-text {
+    font-size: 0.9vw;
     display: flex;
     list-style-type: none;
     margin: 0;
@@ -147,8 +153,8 @@ h3[class*="tagline"] {
     color: var(--beige);
     top: 0.5vh;
     margin-bottom: 1em;
-    right:0;
-    font-size: 50px;
+    right: 0;
+    font-size: 3vw;
 }
 
 #menu-icon:hover {
@@ -164,7 +170,6 @@ h3[class*="tagline"] {
     top: 0vh;
     bottom: 0vh;
     width: 30vw;
-    height: 100vh;
     right: -32vw;
     z-index: 3;
     height: 100vh;
@@ -178,17 +183,18 @@ h3[class*="tagline"] {
 }
 
 .menu-item {
-    padding-bottom: 1.5em;
-    opacity:1;
+    font-size: 1.5vw;
+    padding-bottom: 1.2em;
+    opacity: 1;
     transition: opacity 0.5s;
 }
 
 .menu-item:hover {
-    opacity:0.8;
+    opacity: 0.8;
 }
 
 .socials {
-    font-size: 1.5em;
+    font-size: 1.5vw;
     text-align: center;
     position: relative;
     top: 50%;
@@ -203,8 +209,9 @@ h3[class*="tagline"] {
     flex-grow: 0.6;
     bottom: 2vh;
 }
-.social-i:hover{
-    opacity:0.8;
+
+.social-i:hover {
+    opacity: 0.8;
 }
 
 .menu-text {
@@ -219,10 +226,22 @@ h3[class*="tagline"] {
 }
 
 /*Main Content*/
+
+main {
+    position:relative;
+    top:10vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow:20;
+    justify-content: space-evenly;
+}
+
 .main-text {
-    position: relative;
-    top: 3em;
-    left: 7vw;
+    display:flex;
+    flex-direction:column;
+    top: 2vh;
+    left: 1vw;
     width: 35vw;
     height: 50vh;
 }
@@ -237,6 +256,8 @@ h3[class*="tagline"] {
     left: 0.3em;
     position: relative;
     line-height: 2em;
+    margin-top:0;
+    font-size:1vw;
 }
 
 .readmore-medium {
@@ -245,6 +266,7 @@ h3[class*="tagline"] {
     letter-spacing: 0.2vw;
     left: 0.3vw;
     top: 3vw;
+    text-align:center;
     border: 1px solid var(--beige);
     padding: 1vw;
     padding-left: 2.5vw;
@@ -253,40 +275,131 @@ h3[class*="tagline"] {
     background-color: var(--beige);
 }
 
-/* Rettangoli carosello immagini */
-
 .swiper {
-    position: absolute;
-    top: 20vh;
-    right:5vw;
-    height: 60vh;
+    position: relative;
+    margin: 0;
+    top: 2vw;
     width: 43vw;
+    height: 28vw;
     z-index: 2;
     --swiper-pagination-color: var(--beige);
+
+}
+
+.slide {
+    width: 100%;
+    display: block;
+    object-fit: fill;
+}
+
+.swiper-button-next {
+    color: var(--beige);
+    right: 0;
+}
+
+.swiper-button-prev {
+    color: var(--beige);
+    left: 0.6em;
+}
+
+@media (orientation: portrait) {
+    h3[class*="tagline"] {
+        font-size:5vw;
+    }
+
+    .name-bold {
+        font-size: 8vw;
+    }
+
+    /*TOPBAR CON NAVBAR*/
+    .navbar-text {
+        font-size: 0.9vw;
+        display:none;
+    }
+
+    .navbar-item {
+        font-size:5vw;
+    }
+
     
-}
 
-.swiper-button-next{
-    color:var(--beige);
-}
+    /*ICONA DEL MENU*/
 
-.swiper-button-prev{
-    color:var(--beige);
-}
-
-/* Cellulari */
-@media (min-width: 0) {
-    html{
-        background-color: white;
+    #menu-icon {
+        font-size:13vw;
+        position: relative;
+        top: 0.2vh;
     }
-}
 
-/* Computers */
-@media (min-width: 576px) and (max-width: 768px){
-    html{
-        background-color: white;
+    /*MENU*/
+
+    .menu {
+        width: 50vw;
+        right: -52vw;
     }
-    #names {
-        flex-grow: 0.2;
+
+    .menu-disappear {
+        right: 0vw;
+    }
+
+    .menu-item {
+        padding-bottom: 1.5vh;
+        font-size:3vh;
+    }
+
+    .socials {
+        font-size: 3vh;
+        top:40vh;
+    }
+
+    .icone-socials {
+        flex-wrap: wrap;
+        gap: 20%;
+        padding: 3vh;
+        padding-top: 0vh;
+        padding-bottom: 0vh;
+    }
+
+    .menu-text {
+        margin: 0.2em;
+        margin-top: 7vh;
+    }
+
+    /*Main Content*/
+    main {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 30%;
+        justify-content: space-evenly;
+    }
+
+    .main-text {
+        position: relative;
+        left:6vw;
+        width: 75vw;
+        height: 60vh;
+        top: 1vh;
+    }
+
+    .main-title-bold {
+        font-size: 13vw;
+    }
+
+    .main-description-regular {
+        left: 0.3em;
+        font-size: 4vw;
+    }
+
+    .readmore-medium {
+        font-size: 6vw;
+    }
+
+    .swiper {
+        top:10vh;
+        bottom:3vh;
+        left:2vh;
+        width:90%;
+        height:fit-content;
     }
 }
