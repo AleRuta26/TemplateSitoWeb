@@ -1,6 +1,6 @@
 :root {
     --beige: rgb(146, 125, 89);
-    --beige-menu: #c2c1c1;
+    --beige-menu: #ebeaea;
     --grigio: #383838;
 }
 
@@ -195,6 +195,10 @@ h3[class*="tagline"] {
     gap: 20px;
 }
 
+.menu-text-portrait {
+    display: none;
+}
+
 .menu-item {
     font-size: 1.5vw;
     opacity: 1;
@@ -228,9 +232,7 @@ h3[class*="tagline"] {
     opacity: 0.8;
 }
 
-.menu-text-portrait {
-    display: none;
-}
+
 
 
 
@@ -271,7 +273,7 @@ main {
     position: relative;
     height: 3vw;
     width: 13vw;
-    margin: 2px;
+    margin: 5px;
     border-radius: 10px;
     background-color: var(--beige);
 }
@@ -383,6 +385,7 @@ main {
         justify-content: space-between;
         gap: 20px;
         height: auto;
+        padding-inline-start: 30px;
     }
 
     .socials {
