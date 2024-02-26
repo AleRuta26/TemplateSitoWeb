@@ -229,34 +229,32 @@ h3[class*="tagline"] {
 
 main {
     position:relative;
-    top:10vh;
+    top:5vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    flex-flow:20;
     justify-content: space-evenly;
 }
 
 .main-text {
     display:flex;
     flex-direction:column;
-    top: 2vh;
     left: 1vw;
     width: 35vw;
     height: 50vh;
+    gap:10%;
 }
 
 .main-title-bold {
     font-size: 6vw;
-    margin-top: 0.5em;
     line-height: 1em;
+    margin:0;
 }
 
 .main-description-regular {
     left: 0.3em;
     position: relative;
     line-height: 2em;
-    margin-top:0;
     font-size:1vw;
 }
 
@@ -265,7 +263,6 @@ main {
     font-size: 1vw;
     letter-spacing: 0.2vw;
     left: 0.3vw;
-    top: 3vw;
     text-align:center;
     border: 1px solid var(--beige);
     padding: 1vw;
@@ -278,7 +275,6 @@ main {
 .swiper {
     position: relative;
     margin: 0;
-    top: 2vw;
     width: 43vw;
     height: 28vw;
     z-index: 2;
@@ -312,6 +308,9 @@ main {
     }
 
     /*TOPBAR CON NAVBAR*/
+    .topbar{
+        margin-top:4vh;
+    }
     .navbar-text {
         font-size: 0.9vw;
         display:none;
@@ -370,8 +369,8 @@ main {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        gap: 30%;
-        justify-content: space-evenly;
+        justify-content: space-between;
+        gap:2%;
     }
 
     .main-text {
@@ -379,7 +378,7 @@ main {
         left:6vw;
         width: 75vw;
         height: 60vh;
-        top: 1vh;
+        top: 0.5vh;
     }
 
     .main-title-bold {
@@ -396,10 +395,11 @@ main {
     }
 
     .swiper {
-        top:10vh;
+        top:5vh;
         bottom:3vh;
         left:2vh;
         width:90%;
         height:fit-content;
+        margin-bottom:10vh;
     }
 }
