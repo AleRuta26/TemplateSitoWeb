@@ -144,30 +144,30 @@ h3[class*="tagline"] {
 
 /*ICONA DEL MENU*/
 
-#menu-icon {
-    position: relative;
-    z-index: 4;
+.menu-icon{
+    position:relative;
+    z-index: 0;
     color: var(--beige);
     top: 0.5vh;
-    margin-bottom: 1em;
     right: 0;
     font-size: 3vw;
 }
 
-#menu-icon:hover {
+.menu-icon:hover {
     color: var(--beige);
     opacity: 0.8;
     cursor: pointer;
 }
 
+
+
+
 /*MENU*/
 .menu {
-    overflow: hidden;
     position: fixed;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    gap: 50vh;
+    justify-content: space-between;
     top: 0vh;
     bottom: 0vh;
     width: 30vw;
@@ -176,23 +176,34 @@ h3[class*="tagline"] {
     height: 100vh;
     background-color: var(--beige-menu);
     box-shadow: 0 0 2px 2px var(--beige-menu);
+   
     transition: all 0.5s;
+}
+
+.menu-aperto{
+    overflow-y:hidden;
 }
 
 .menu-disappear {
     right: 0vw;
 }
 
+.bi-x-lg{
+    text-align:center;
+    padding-top:50px;
+}
+
+
+
 .menu-text-landscape {
     font-size: 1.5em;
     display: flex;
     list-style-type: none;
-    margin: 2em;
-    margin-top: 10vh;
     padding: 1em;
     flex-direction: column;
     justify-content: space-evenly;
     gap: 20px;
+    overflow: auto;
 }
 
 .menu-text-portrait {
@@ -214,6 +225,7 @@ h3[class*="tagline"] {
     text-align: center;
     display: flex;
     flex-direction: column;
+    padding-bottom:50px;
 }
 
 .testo-socials {
@@ -231,6 +243,37 @@ h3[class*="tagline"] {
 .social-i:hover {
     opacity: 0.8;
 }
+
+.overlay-shown{
+    display:block;
+    position:absolute;
+    height:100%;
+    width:100%;
+    background-color:black;
+    z-index:-1;
+    top:0;
+    right:0;
+    opacity:0;
+    transition: all 1s;
+}
+
+.overlay{
+    display:block;
+    position:absolute;
+    height:100%;
+    width:100%;
+    background-color:black;
+    opacity:0.4;
+    z-index:2;
+    top:0;
+    right:0;
+    transition: all 1s;
+}
+
+
+
+
+
 
 
 
@@ -253,7 +296,7 @@ main {
     flex-direction: column;
     left: 1vw;
     width: 35vw;
-    height: 50vh;
+    height: 53vh;
     gap: 10%;
 }
 
@@ -276,16 +319,23 @@ main {
     margin: 5px;
     border-radius: 10px;
     background-color: var(--beige);
+    z-index:0;
+    cursor:pointer;
 }
 
 #readmore-text {
     position: relative;
     text-align: center;
     font-size: 1.3vw;
-    letter-spacing: 0.2vw;
-    top: 0.25vw;
+    letter-spacing: 0.1vw;
+    top: 20%;
     margin: 0;
     color: white;
+    
+}
+
+.readmore-medium:hover{
+    cursor:pointer;
 }
 
 .swiper {
@@ -293,7 +343,7 @@ main {
     margin: 0;
     width: 43vw;
     height: 28vw;
-    z-index: 2;
+    z-index: -1;
     --swiper-pagination-color: var(--beige);
     --swiper-navigation-sides-offset: 1vw;
     --swiper-navigation-size: 2vw;
@@ -348,7 +398,7 @@ main {
     /*ICONA DEL MENU*/
 
 
-    #menu-icon {
+    .menu-icon {
         font-size: 13vw;
         position: relative;
         top: 0.2vh;
@@ -357,13 +407,19 @@ main {
     /*MENU*/
 
     .menu {
-        width: 50vw;
-        right: -52vw;
+        width: 55vw;
+        right: -57vw;
         gap:0;
+        
     }
 
     .menu-disappear {
         right: 0vw;
+    }
+    .bi-x-lg{
+        right: 0;
+        width:auto;
+        text-align:center;
     }
 
     .menu-item {
@@ -386,6 +442,7 @@ main {
         gap: 20px;
         height: auto;
         padding-inline-start: 30px;
+        overflow: auto;
     }
 
     .socials {
@@ -400,6 +457,32 @@ main {
         padding: 3vh;
         padding-top: 0vh;
         padding-bottom: 0vh;
+    }
+
+    .overlay-shown{
+        display:block;
+        position:absolute;
+        height:110vh;
+        width:110vw;
+        background-color:black;
+        z-index:-1;
+        top:0;
+        right:0;
+        opacity:0;
+        transition: all 1s;
+    }
+    
+    .overlay{
+        display:block;
+        position:absolute;
+        height:110vh;
+        width:110vw;
+        background-color:black;
+        opacity:0.4;
+        z-index:2;
+        top:0;
+        right:0;
+        transition: all 1s;
     }
 
 
